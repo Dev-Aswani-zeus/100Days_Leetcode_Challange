@@ -1,17 +1,11 @@
 class Solution:
     def shortestBeautifulSubstring(self, s: str, k: int) -> str:
-
         left = 0
         ones = 0
         answer = ""
-
         for right in range(len(s)):
-
-            # Add current character
             if s[right] == '1':
                 ones += 1
-
-            # We have exactly k ones
             while ones == k:
 
                 # Current substring
