@@ -10,10 +10,8 @@ class Solution:
 
             return total
 
-        # Make the array in the order we actually want
         sorted_nums = sorted(nums, key=lambda x: (digit_sum(x), x))
 
-        # Remember where each number currently is
         position = {}
 
         for i in range(len(nums)):
@@ -23,7 +21,6 @@ class Solution:
 
         for i in range(len(nums)):
 
-            # Already in correct position
             if nums[i] == sorted_nums[i]:
                 continue
 
