@@ -2,8 +2,6 @@ import heapq
 
 class Solution:
     def busiestServers(self, k: int, arrival: list[int], load: list[int]) -> list[int]:
-
-        # Segment tree stores the number of available servers
         tree = [0] * (4 * k)
 
         def build(node, left, right):
