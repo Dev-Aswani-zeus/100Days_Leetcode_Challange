@@ -8,14 +8,10 @@ class Solution:
             if left == right:
                 tree[node] = 1
                 return
-
             mid = (left + right) // 2
-
             build(node * 2, left, mid)
             build(node * 2 + 1, mid + 1, right)
-
             tree[node] = tree[node * 2] + tree[node * 2 + 1]
-
         def update(node, left, right, index, value):
             if left == right:
                 tree[node] = value
@@ -29,8 +25,6 @@ class Solution:
                 update(node * 2 + 1, mid + 1, right, index, value)
 
             tree[node] = tree[node * 2] + tree[node * 2 + 1]
-
-        # Find the first available server in a range
         def find_first(node, left, right, ql, qr):
             if right < ql or left > qr or tree[node] == 0:
                 return -1
