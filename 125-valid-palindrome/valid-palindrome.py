@@ -1,4 +1,3 @@
-
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         left = 0
